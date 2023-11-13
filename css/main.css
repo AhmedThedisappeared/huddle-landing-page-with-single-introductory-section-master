@@ -1,0 +1,131 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+main {
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat; 
+    background-color:var(--Violet);
+    height: 100%;
+}
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 34px;
+    padding-right: 34px;
+    margin: 0  auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+} 
+h1 ,h2 ,h3 ,h4 ,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+}
+header img {
+    width: 150px;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 60px;
+    text-align: center;
+    color: white;
+}
+.content .text {
+    margin:60px 0;
+}
+.content .text p {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+.content .text button {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color: var(--Violet);
+    box-shadow: 6px 4px 15px 0 hsl(257deg 52.65% 11.02% / 55%);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.content .text button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.icon i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.icon i:hover {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+}
+@media (min-width:768px) {
+    main {
+        background-image: url(../images/bg-desktop.svg);
+        width: 100%;
+    }
+    .container {
+        padding: 50px ;
+    }
+    header img {
+        width: 200px;
+    }
+    .content {
+        flex-direction: row;
+        text-align: left;
+        margin-top: 90px;
+        height: 100%;
+    }
+    .content .img-box {
+        width: 55%;
+    }
+    .content .text {
+        width: calc(45% - 20px);
+        max-width: 500px;
+        margin-left: 20px;
+    }
+    .content .text h1 {
+        max-width: 400px;
+        font-size: 36px;
+    }
+    .icon {
+        width: 100%;
+        justify-content: flex-end;
+        margin-right: 80px;
+    }
+}
